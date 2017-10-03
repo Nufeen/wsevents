@@ -4,6 +4,7 @@
   max-width: 700px;
   margin: 0 auto;
   margin-top: 10vh;
+  padding-bottom: 20px;
 }
 
 @media (max-height: 700px) {
@@ -38,7 +39,7 @@
   color: white;
 }
 
-.cities__city[data-chosen="true"] {
+.cities__city[data-chosen='true'] {
   background-color: #4bc32d;
   color: black;
   cursor: default;

@@ -35,11 +35,29 @@
   cursor: pointer;
 }
 
-.month__caption {
-  font-size: 12px;
-  font-family: "PT Mono", monospace;
+@media (max-width: 700px) {
+  .schedule__prev,
+  .schedule__next {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 70px;
+    margin-right: 45px;
+    margin-top: -60px;
+  }
+  .schedule__next {
+    right: 0px;
+  }
 }
 
+.month {
+  min-width: 30px;
+}
+
+.month__caption {
+  font-size: 12px;
+  font-family: 'PT Mono', monospace;
+}
 
 .event {
   position: relative;
@@ -81,16 +99,16 @@
   min-width: 60px;
 }
 
-.event[data-past="true"] {
+.event[data-past='true'] {
   background: grey;
   opacity: 0.5;
 }
 
-.event[data-chosen="true"] {
+.event[data-chosen='true'] {
   background: red;
 }
 
-.event[data-city="true"] {
+.event[data-city='true'] {
   outline: 2px solid black;
   box-shadow: 0px 0px 0px 3px #4bc32d;
 }

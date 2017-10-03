@@ -40,3 +40,8 @@ get(url, errCode)
     );
   })
   .catch(error => console.warn(error));
+
+if (window.innerWidth < 600) {
+  const metaTag = document.querySelectorAll('meta[name="viewport"]')[0];
+  metaTag.content = 'width=600';
+}

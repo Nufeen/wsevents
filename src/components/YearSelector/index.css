@@ -3,6 +3,12 @@
   margin-left: 100px;
 }
 
+@media (max-width: 700px) {
+  .year {
+    display: none;
+  }
+}
+
 .year__prev {
   height: 20px;
   width: 20px;
@@ -31,7 +37,7 @@
 
 .year__value {
   font-size: 50px;
-  font-family: "PT Mono", monospace;
+  font-family: 'PT Mono', monospace;
   background-color: transparent;
   color: grey;
   outline: none;
