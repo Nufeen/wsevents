@@ -52,22 +52,22 @@ class Schedule extends React.Component {
             {month.map(ev => (
               <div
                 key={ev.id}
-                onClick={() => this.handleClick(ev.id)}
-                onMouseOver={() => this.renderTooltip(ev)}
                 className="event"
                 data-chosen={ev.id == chosen}
                 data-past={ev.id <= current}
                 data-city={ev.place.includes(city)}
                 data-tooltip={tooltip(ev)}
                 data-date={date(ev)}
+                onClick={() => this.handleClick(ev.id)}
+                onMouseOver={() => this.renderTooltip(ev)}
               />
             ))}
           </div>
         ))}
         <button
           className="schedule__next"
-          onClick={this.next}
           disabled={chosen == data.length - 1}
+          onClick={this.next}
         />
       </section>
     );

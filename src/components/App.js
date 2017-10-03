@@ -31,7 +31,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    let t = Date.now();
+    const t = Date.now();
     const tt = moment(t).format('YYYYMMDD');
     const nextEvent = this.props.data.find(x => {
       return x.date >= tt;
@@ -91,17 +91,17 @@ class App extends React.Component {
         </header>
         <Schedule
           year={year}
-          data={this.props.data}
-          choose={this.choose}
           chosen={chosen}
           current={current}
           city={city}
+          data={this.props.data}
+          choose={this.choose}
         />
         <TheEvent d={d} />
         <Cities
           city={city}
-          data={this.props.data}
           year={year}
+          data={this.props.data}
           highlight={this.highlight}
         />
         <ErrMsg error={this.props.error} />
