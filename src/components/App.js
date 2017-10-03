@@ -6,6 +6,7 @@ import GMap from './Map/map.js';
 import Schedule from './Schedule';
 import Cities from './Cities';
 import TheEvent from './EventBox';
+import YearSelector from './YearSelector';
 
 import T from '../data/ru.json';
 
@@ -126,13 +127,5 @@ const ErrMsg = ({ error }) => {
     </div>
   ) : null;
 };
-
-const YearSelector = ({ year, prev, next }) => [
-  <button key="e1" className="year__prev" onClick={prev} />,
-  <div key="e2" className="year__value">
-    {year}
-  </div>,
-  <button key="e3" className="year__next" onClick={next} />,
-];
 
 export default App;
