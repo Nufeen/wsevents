@@ -4,6 +4,7 @@ import 'core-js/es6/promise';
 import 'core-js/fn/string/includes';
 import 'core-js/fn/array/from';
 import 'core-js/fn/array/find';
+import 'core-js/fn/set';
 import 'whatwg-fetch';
 
 import './index.css';
