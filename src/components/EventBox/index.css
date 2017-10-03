@@ -1,0 +1,26 @@
+.details {
+  text-align: left;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-left: 200px;
+  margin-top: -220px;
+}
+
+@media (max-width: 900px) {
+  .details {
+    margin-top: -50px;
+    padding-left: 0px;
+  }
+}
+
+.details * {
+  background: rgba(50, 50, 50, 0.3);
+  display: table;
+  margin-bottom: 6px;
+  padding: 9px;
+}
+
+.details a:hover {
+  color: firebrick;
+}

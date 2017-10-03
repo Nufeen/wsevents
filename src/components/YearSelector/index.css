@@ -1,0 +1,39 @@
+.year {
+  display: flex;
+  margin-left: 100px;
+}
+
+.year__prev {
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  transform: rotate(-45deg);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.year__next {
+  height: 20px;
+  width: 20px;
+  background: transparent;
+  outline: none;
+  border: none;
+  border-top: 2px solid white;
+  border-right: 2px solid white;
+  transform: rotate(45deg);
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.year__value {
+  font-size: 50px;
+  font-family: "PT Mono", monospace;
+  background-color: transparent;
+  color: grey;
+  outline: none;
+  border: none;
+}

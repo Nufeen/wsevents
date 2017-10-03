@@ -1,0 +1,173 @@
+@import './components/Map/index.css';
+@import './components/YearSelector/index.css';
+@import './components/Schedule/index.css';
+@import './components/Cities/index.css';
+@import './components/EventBox/index.css';
+
+body {
+  margin: 0;
+  padding: 0;
+  background: black;
+  background-repeat: repeat;
+  color: white;
+  text-align: center;
+  font-family: "PT Sans", sans-serif;
+  line-height: 1.5em;
+}
+
+a {
+  color: brown;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button[disabled] {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.background {
+  position: fixed;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.root {
+  padding-top: 20px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  line-height: 18px;
+  min-height: 100vh;
+  box-shadow: 0px 0px 10px 10px rgba(77, 53, 77, 0.05);
+}
+
+.root a[href^="#"] {
+  text-decoration: none;
+}
+
+.root button {
+  border-radius: 0;
+}
+
+@media (max-width: 1000px) {
+  .root {
+    overflow: hidden;
+  }
+}
+
+.header {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding-top: 5vh;
+  padding-bottom: 5%;
+  padding-left: 147px;
+  text-align: left;
+  line-height: 2em;
+  display: flex;
+  align-items: flex-end;
+}
+
+@media (max-width: 1000px) {
+  .header {
+    padding-left: 0;
+  }
+}
+
+.header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header h2 {
+  font-size: 21px;
+}
+
+.header a {
+  color: darkgrey;
+}
+
+.header a:hover {
+  color: brown;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+button[disabled] {
+  opacity: 0.2;
+  cursor: default;
+}
+
+.error {
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 30px;
+  color: brown;
+  font-size: 12px;
+}
+
+@media (max-height: 650px) {
+  .error {
+    display: none;
+  }
+}
+
+@media (max-width: 850px) {
+  .error {
+    display: none;
+  }
+}
+
+.footer {
+  color: grey;
+  position: absolute;
+  bottom: 20px;
+  font-size: 10px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.footer svg {
+  width: 18px;
+  height: 18px;
+}
+
+.footer path {
+  fill: grey;
+}
+
+footer a {
+  display: inline-block;
+  margin: 3px !important;
+}
+
+footer a:hover path {
+  fill: brown;
+}
+
+@media (max-height: 750px) {
+  .footer {
+    display: none;
+  }
+}

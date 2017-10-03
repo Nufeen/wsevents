@@ -1,0 +1,45 @@
+.cities {
+  text-align: center;
+  width: 90%;
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 10vh;
+}
+
+@media (max-height: 700px) {
+  .cities {
+    max-width: 90%;
+  }
+}
+
+@media (max-height: 650px) {
+  .cities {
+    max-width: 90%;
+    margin-top: 5vh;
+  }
+}
+
+@media (max-height: 550px) {
+  .cities {
+    display: none;
+  }
+}
+
+.cities__city {
+  display: inline-block;
+  font-size: 12px;
+  color: grey;
+  padding: 2px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.cities__city:hover {
+  color: white;
+}
+
+.cities__city[data-chosen="true"] {
+  background-color: #4bc32d;
+  color: black;
+  cursor: default;
+}
