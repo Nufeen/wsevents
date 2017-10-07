@@ -1,9 +1,9 @@
 .cities {
   text-align: center;
   width: 90%;
-  max-width: 700px;
+  max-width: 700rem;
   margin: 0 auto;
-  margin-top: 10vh;
+  margin-top: 15vh;
   padding-bottom: 20px;
 }
 
@@ -28,10 +28,10 @@
 
 .cities__city {
   display: inline-block;
-  font-size: 12px;
+  font-size: 12rem;
   color: grey;
-  padding: 2px;
-  margin: 3px;
+  padding: 2rem;
+  margin: 3rem;
   cursor: pointer;
 }
 

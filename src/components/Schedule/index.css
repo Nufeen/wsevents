@@ -55,18 +55,18 @@
 }
 
 .month__caption {
-  font-size: 12px;
+  font-size: 12rem;
   font-family: 'PT Mono', monospace;
 }
 
 .event {
   position: relative;
-  width: 10px;
-  height: 10px;
+  width: 10rem;
+  height: 10rem;
   background: white;
-  margin: 10px;
+  margin: 10rem;
   cursor: pointer;
-  padding: 3px;
+  padding: 3rem;
 }
 
 .event:before {

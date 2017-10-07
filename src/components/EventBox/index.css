@@ -3,8 +3,13 @@
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding-left: 200px;
-  margin-top: -220px;
+  padding-left: 50px;
+  margin-top: -170px;
+  font-size: 16rem;
+}
+
+.details h3 {
+  font-size: 25rem;
 }
 
 @media (max-width: 900px) {
