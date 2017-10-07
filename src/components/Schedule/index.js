@@ -54,7 +54,7 @@ class Schedule extends React.Component {
                 key={ev.id}
                 className="event"
                 data-chosen={ev.id == chosen}
-                data-past={ev.id <= current}
+                data-past={ev.id < current}
                 data-city={ev.place.includes(city)}
                 data-tooltip={tooltip(ev)}
                 data-date={date(ev)}
