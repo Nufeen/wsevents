@@ -47,7 +47,12 @@ class Schedule extends React.Component {
           disabled={chosen == 0}
         />
         {dataByMonths(data, year).map((month, i) => (
-          <div className="month" key={i} data-id={i}>
+          <div
+            style={{ 'z-index': `${20 - i}` }}
+            className="month"
+            key={i}
+            data-id={i}
+          >
             <span className="month__caption">{monthCaption(i + 1)}</span>
             {month.map(ev => (
               <div
