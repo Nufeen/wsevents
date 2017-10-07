@@ -10,7 +10,9 @@ const TheEvent = ({ d }) => (
     <time>
       {moment(d.date, 'YYYYMMDD').format('l')} ({moment(d.date, 'YYYYMMDD').fromNow()})
     </time>
-    <a href={d.link}>{d.link}</a>
+    <a target="_blank" href={d.link}>
+      {d.link}
+    </a>
   </section>
 );
 

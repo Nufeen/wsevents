@@ -79,7 +79,10 @@ class App extends React.Component {
           <section className="header__text">
             <h1>{T.header}</h1>
             <h2>
-              {T.subhead} <a href={T.link}>events schedule</a>
+              {T.subhead}{' '}
+              <a target="_blank" href={T.link}>
+                events schedule
+              </a>
             </h2>
           </section>
           <section className="year">
@@ -107,10 +110,10 @@ class App extends React.Component {
         />
         <ErrMsg error={this.props.error} />
         <footer className="footer">
-          <a href="https://github.com/Nufeen/wsevents">
+          <a target="_blank" href="https://github.com/Nufeen/wsevents">
             <div dangerouslySetInnerHTML={{ __html: gh }} />
           </a>
-          <a href="https://telegram.me/Lyrical_Tokarev">
+          <a target="_blank" href="https://telegram.me/Lyrical_Tokarev">
             <div dangerouslySetInnerHTML={{ __html: tg }} />
           </a>
         </footer>
