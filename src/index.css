@@ -104,13 +104,13 @@ button[disabled] {
 
 .header h1 {
   text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 30rem;
+  letter-spacing: 5rem;
+  font-size: 27rem;
   margin-bottom: 10rem;
 }
 
 .header h2 {
-  font-size: 21rem;
+  font-size: 20rem;
   line-height: 30rem;
 }
 

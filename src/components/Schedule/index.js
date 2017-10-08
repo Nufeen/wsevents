@@ -53,7 +53,10 @@ class Schedule extends React.Component {
             key={i}
             data-id={i}
           >
-            <span className="month__caption">{monthCaption(i + 1)}</span>
+            <span
+              className="month__caption"
+              dangerouslySetInnerHTML={{ __html: monthCaption(i + 1) }}
+            />
             {month.map(ev => (
               <div
                 key={ev.id}
@@ -88,7 +91,22 @@ function tooltip(ev) {
 }
 
 function monthCaption(n) {
-  return n > 9 ? n : `0${n}`;
+  const m = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  const num = n > 9 ? n : `0${n}`;
+  return `<span>${m[n - 1]}</span>${num}`;
 }
 
 function dataByMonths(d, year) {
