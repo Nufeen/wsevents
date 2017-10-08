@@ -176,12 +176,12 @@ button[disabled] {
   fill: grey;
 }
 
-footer a {
+.footer a {
   display: inline-block;
   margin: 3px !important;
 }
 
-footer a:hover path {
+.footer a:hover path {
   fill: brown;
 }
 

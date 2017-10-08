@@ -60,11 +60,11 @@
 }
 
 .month__caption span {
-color: brown;
-display: block;
-font-size: 10rem;
-margin-bottom: 3rem;
-margin-top: -12rem;
+  color: brown;
+  display: block;
+  font-size: 10rem;
+  margin-bottom: 3rem;
+  margin-top: -12rem;
 }
 
 .event {
