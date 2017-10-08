@@ -6,15 +6,24 @@
   padding-left: 50px;
   margin-top: -170px;
   font-size: 16rem;
+z-index: 22;
 }
 
 .details h3 {
   font-size: 25rem;
 }
 
-@media (max-width: 900px) {
+@media (max-height: 750px) {
   .details {
-    margin-top: -50px;
+    margin-top: -250px;
+    padding-left: 0px;
+  }
+}
+
+@media (max-width: 750px) {
+
+  .details {
+    margin-top: -90px;
     padding-left: 0px;
   }
 }

@@ -1,10 +1,12 @@
 .cities {
+position: absolute;
+bottom: 10vh;
   text-align: center;
   width: 90%;
   max-width: 700rem;
   margin: 0 auto;
-  margin-top: 15vh;
-  padding-bottom: 20px;
+left: 0;
+right: 0;
 }
 
 @media (max-height: 700px) {
@@ -20,7 +22,8 @@
   }
 }
 
-@media (max-height: 550px) {
+@media (max-height: 580px),
+(max-width: 700px) {
   .cities {
     display: none;
   }
