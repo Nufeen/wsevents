@@ -11,4 +11,5 @@
 ## 1.1.1
 
 - Css fixes
-- Fix today event timing
+- Fix ongoing event timing
+- Add keyboard navigation

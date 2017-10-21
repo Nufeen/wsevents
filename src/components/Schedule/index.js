@@ -9,6 +9,16 @@ class Schedule extends React.Component {
     this.state = { hovered: false };
   }
 
+  componentDidMount() {
+    document.addEventListener('keydown', e => {
+      if (e.keyCode == 40 || e.keyCode == 9 || e.keyCode == 32) {
+        this.next();
+      } else if (e.keyCode == 38 || e.keyCode == 8) {
+        this.prev();
+      }
+    });
+  }
+
   next() {
     const { chosen, data } = this.props;
     const max = data.length - 1;
