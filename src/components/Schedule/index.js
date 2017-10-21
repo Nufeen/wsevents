@@ -120,7 +120,7 @@ function monthCaption(n) {
 }
 
 function dataByMonths(d, year) {
-  let a12 = Array.from(Array(12).keys());
+  const a12 = Array.from(Array(12).keys());
   return a12.map((month, i) =>
     d.filter(x => {
       const m = moment(x.date).format('M');

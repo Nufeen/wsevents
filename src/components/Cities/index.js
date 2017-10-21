@@ -2,12 +2,17 @@ import React from 'react';
 import moment from 'moment';
 
 const Cities = ({ data, year, city, highlight }) => {
-  let places = data
+  const places = data
     .filter(x => moment(x.date).format('Y') == year)
     .map(x => x.place.split(',')[0])
     .sort((a, b) => (a > b ? 1 : -1));
 
-  let uniq = [...new Set(places)];
+  const uniq = [...new Set(places)];
+
+  const count = uniq.reduce((acc, place) => {
+    acc[place] = places.filter(x => x == place).length;
+    return acc;
+  }, {});
 
   return (
     <section className="cities">
@@ -18,7 +23,7 @@ const Cities = ({ data, year, city, highlight }) => {
           onClick={() => highlight(place)}
           className="cities__city"
         >
-          #{place}
+          #{place} <span className="cities__count">{count[place]}</span>
         </div>
       ))}
     </section>

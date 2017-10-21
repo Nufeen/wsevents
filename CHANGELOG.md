@@ -14,3 +14,4 @@
 - Fix ongoing event timing
 - Add keyboard navigation
 - Fix g-calendar parsing issues (extra symbols in event names)
+- Add city counters

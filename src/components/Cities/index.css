@@ -55,3 +55,9 @@
   color: black;
   cursor: default;
 }
+
+.cities__count {
+	font-size: .8em;
+	color: firebrick;
+}
+
