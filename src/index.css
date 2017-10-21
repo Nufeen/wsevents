@@ -105,8 +105,13 @@ button[disabled] {
 .header h1 {
   text-transform: uppercase;
   letter-spacing: 5rem;
-  font-size: 27rem;
+  font-size: 22rem;
   margin-bottom: 10rem;
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 5px;
+  padding-left: 10px;
 }
 
 .header h2 {
