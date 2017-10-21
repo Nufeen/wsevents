@@ -1,12 +1,16 @@
 .details {
+  position: absolute;
   text-align: left;
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
+left: 0;
+right: 0;
+top: calc(50% - 100px);
   padding-left: 50px;
-  margin-top: -170px;
   font-size: 16rem;
   z-index: 22;
+pointer-events: none;
 }
 
 .details h3 {
@@ -35,6 +39,9 @@
   padding: 9px;
 }
 
+.details a {
+pointer-events: auto;
+}
 .details a:hover {
   color: firebrick;
 }
