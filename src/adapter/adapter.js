@@ -1,8 +1,8 @@
 function humanize(event, i) {
   return {
     id: i,
-    name: event['SUMMARY'],
-    place: event['LOCATION'].replace('\\', ''),
+    name: event['SUMMARY'].replace(/\\/g, ''),
+    place: event['LOCATION'].replace(/\\/g, ''),
     date: event['DTSTART;VALUE=DATE'] || event['DTSTART'],
     link: event['DESCRIPTION'],
   };
