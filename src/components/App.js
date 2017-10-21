@@ -81,7 +81,7 @@ class App extends React.Component {
             <h2>
               {T.subhead}{' '}
               <a target="_blank" href={T.link}>
-                events schedule
+                schedule
               </a>
             </h2>
           </section>

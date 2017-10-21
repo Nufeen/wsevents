@@ -1,6 +1,6 @@
 {
   "name": "wsevents",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "scripts": {
     "precommit": "lint-staged",
     "js-fix": "eslint --fix src",

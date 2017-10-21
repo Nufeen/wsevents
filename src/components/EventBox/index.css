@@ -4,32 +4,17 @@
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-left: 0;
-right: 0;
-top: calc(50% - 100px);
+  left: 0;
+  right: 0;
+  top: calc(50% - 3vh);
   padding-left: 50px;
   font-size: 16rem;
   z-index: 22;
-pointer-events: none;
+  pointer-events: none;
 }
 
 .details h3 {
   font-size: 25rem;
-}
-
-@media (max-height: 750px) {
-  .details {
-    margin-top: -250px;
-    padding-left: 0px;
-  }
-}
-
-@media (max-width: 750px) {
-
-  .details {
-    margin-top: -90px;
-    padding-left: 0px;
-  }
 }
 
 .details * {
@@ -40,8 +25,15 @@ pointer-events: none;
 }
 
 .details a {
-pointer-events: auto;
+  pointer-events: auto;
 }
+
 .details a:hover {
   color: firebrick;
+}
+
+@media (max-width: 700px) {
+  .details {
+    padding-left: 0px;
+  }
 }
