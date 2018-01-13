@@ -15,3 +15,10 @@
 - Add keyboard navigation
 - Fix g-calendar parsing issues (extra symbols in event names)
 - Add city counters
+
+## 1.2.0
+
+- Fix calendar source
+- Fix initial year (still left hardcoded, TODO)
+- Fix 2018 initial detail box position
+- Fix some line-height issues

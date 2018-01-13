@@ -58,7 +58,7 @@ class Schedule extends React.Component {
         />
         {dataByMonths(data, year).map((month, i) => (
           <div
-            style={{ 'z-index': `${20 - i}` }}
+            style={{ zIndex: `${20 - i}` }}
             className="month"
             key={i}
             data-id={i}

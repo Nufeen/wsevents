@@ -20,7 +20,7 @@ class App extends React.Component {
     super(props);
     autobind(this);
     this.state = {
-      year: 2017,
+      year: 2018,
       current: 0,
       chosen: 0,
       city: null,
@@ -101,7 +101,7 @@ class App extends React.Component {
           data={this.props.data}
           choose={this.choose}
         />
-        <TheEvent d={d} />
+        <TheEvent d={d} year={year} />
         <Cities
           city={city}
           year={year}

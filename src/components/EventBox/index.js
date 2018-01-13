@@ -5,10 +5,10 @@ moment.locale('ru');
 
 const today = moment().format('YYYYMMDD');
 
-const TheEvent = ({ d }) => {
+const TheEvent = ({ d, year }) => {
   const date = moment(d.date, 'YYYYMMDD');
   return (
-    <section className="details">
+    <section className="details" data-year={year}>
       <h3>{d.name}</h3>
       <address>{d.place}</address>
       <time>

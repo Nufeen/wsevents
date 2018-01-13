@@ -9,12 +9,20 @@
   top: calc(50% - 3vh);
   padding-left: 50px;
   font-size: 16rem;
+  line-height: 20rem;
   z-index: 22;
   pointer-events: none;
 }
 
+
+.details[data-year="2018"] {
+  padding-right: 50px;
+  padding-left: calc(50vw - 10%);
+}
+
 .details h3 {
   font-size: 25rem;
+  line-height: 30rem;
 }
 
 .details * {

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+/* eslint-disable no-console, no-unused-vars */
 
 import 'core-js/es6/promise';
 import 'core-js/fn/string/includes';
@@ -18,19 +18,18 @@ import App from './components/App.js';
 import convert from './helpers/convert';
 import adapter from './adapter/adapter';
 
-const url =
-  'https://raw.githubusercontent.com/web-standards-ru/calendar/master/dist/calendar.ics';
+const url = 'https://wsevents.ru/src/data/calendar.ics';
 
 let errCode = 0;
 
-function get(url) {
-  return fetch(url).catch(() => {
+function get(url, errCode) {
+  return fetch(url).catch(e => {
     errCode = 1;
-    return get('./src/data/backup.ics');
+    return get('./src/data/calendar.ics');
   });
 }
 
-get(url, errCode)
+get(url)
   .then(d => d.text())
   .then(d => convert(d))
   .then(d => adapter(d))
