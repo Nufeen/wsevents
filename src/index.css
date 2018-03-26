@@ -7,6 +7,7 @@
 body {
   margin: 0;
   padding: 0;
+  left: 0;
   width: 100;
   height: 100%;
   background: black;
@@ -80,6 +81,22 @@ button[disabled] {
 @media (max-width: 1000px) {
   .root {
     overflow: hidden;
+  }
+}
+
+main {
+  display: flex;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.wrapper {
+  width: 70%;
+}
+
+@media (max-height: 580px), (max-width: 1000px) {
+  .wrapper {
+    width: 100%;
   }
 }
 

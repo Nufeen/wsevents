@@ -75,49 +75,52 @@ class App extends React.Component {
     return (
       <main onClick={this.clearSelection}>
         <div className="background" onClick={() => this.highlight(null)} />
-        <header className="header">
-          <section className="header__text">
-            <h1>{T.header}</h1>
-            <h2>
-              {T.subhead}{' '}
-              <a target="_blank" href={T.link}>
-                schedule
-              </a>
-            </h2>
-          </section>
-          <section className="year">
-            <YearSelector
-              year={this.state.year}
-              next={this.nextYear}
-              prev={this.prevYear}
-            />
-          </section>
-        </header>
-        <Schedule
-          year={year}
-          chosen={chosen}
-          current={current}
-          city={city}
-          data={this.props.data}
-          choose={this.choose}
-        />
-        <TheEvent d={d} year={year} />
+
+        <div className="wrapper">
+          <header className="header">
+            <section className="header__text">
+              <h1>{T.header}</h1>
+              <h2>
+                {T.subhead}{' '}
+                <a target="_blank" href={T.link}>
+                  schedule
+                </a>
+              </h2>
+            </section>
+            <section className="year">
+              <YearSelector
+                year={this.state.year}
+                next={this.nextYear}
+                prev={this.prevYear}
+              />
+            </section>
+          </header>
+          <Schedule
+            year={year}
+            chosen={chosen}
+            current={current}
+            city={city}
+            data={this.props.data}
+            choose={this.choose}
+          />
+          <TheEvent d={d} year={year} />
+          <ErrMsg error={this.props.error} />
+          <footer className="footer">
+            <a target="_blank" href="https://github.com/Nufeen/wsevents">
+              <div dangerouslySetInnerHTML={{ __html: gh }} />
+            </a>
+            <a target="_blank" href="https://telegram.me/Lyrical_Tokarev">
+              <div dangerouslySetInnerHTML={{ __html: tg }} />
+            </a>
+          </footer>
+          <GMap place={d.place} data={this.props.data} />
+        </div>
         <Cities
           city={city}
           year={year}
           data={this.props.data}
           highlight={this.highlight}
         />
-        <ErrMsg error={this.props.error} />
-        <footer className="footer">
-          <a target="_blank" href="https://github.com/Nufeen/wsevents">
-            <div dangerouslySetInnerHTML={{ __html: gh }} />
-          </a>
-          <a target="_blank" href="https://telegram.me/Lyrical_Tokarev">
-            <div dangerouslySetInnerHTML={{ __html: tg }} />
-          </a>
-        </footer>
-        <GMap place={d.place} data={this.props.data} />
       </main>
     );
   }

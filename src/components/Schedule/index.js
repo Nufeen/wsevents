@@ -67,12 +67,12 @@ class Schedule extends React.Component {
               className="month__caption"
               dangerouslySetInnerHTML={{ __html: monthCaption(i + 1) }}
             />
-            {month.map(ev => (
+            {sort(month).map(ev => (
               <div
                 key={ev.id}
                 className="event"
                 data-chosen={ev.id == chosen}
-                data-past={ev.id < current}
+                data-past={isPast(ev, current)}
                 data-city={ev.place.includes(city)}
                 data-tooltip={tooltip(ev)}
                 data-date={date(ev)}
@@ -90,6 +90,20 @@ class Schedule extends React.Component {
       </section>
     );
   }
+}
+
+function sort(month) {
+  return month.slice().sort((a, b) => {
+    const a1 = moment(a.date).format('D');
+    const b1 = moment(b.date).format('D');
+    return a1 - b1;
+  });
+}
+
+function isPast(ev) {
+  const t = Date.now();
+  const tt = moment(t).format('YYYYMMDD');
+  return ev.date < tt;
 }
 
 function date(ev) {

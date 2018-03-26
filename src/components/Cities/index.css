@@ -1,37 +1,11 @@
 .cities {
-  position: absolute;
-  bottom: 10vh;
-  text-align: center;
-  width: 90%;
-  max-width: 700rem;
-  margin: 0 auto;
-  left: 0;
-  right: 0;
+  width: 30%;
+  text-align: left;
+  padding-top: 5vh;
+  max-width: 400px;
 }
 
-@media (max-height: 950px) {
-  .cities {
-    text-align: left;
-    max-width: 90%;
-    padding-right: 40%;
-  }
-}
-
-@media (max-height: 700px) {
-  .cities {
-    max-width: 90%;
-  }
-}
-
-@media (max-height: 650px) {
-  .cities {
-    max-width: 90%;
-    margin-top: 5vh;
-  }
-}
-
-@media (max-height: 580px),
-(max-width: 700px) {
+@media (max-height: 580px), (max-width: 1000px) {
   .cities {
     display: none;
   }
@@ -50,14 +24,13 @@
   color: white;
 }
 
-.cities__city[data-chosen='true'] {
+.cities__city[data-chosen="true"] {
   background-color: #4bc32d;
   color: black;
   cursor: default;
 }
 
 .cities__count {
-	font-size: .8em;
-	color: firebrick;
+  font-size: 0.8em;
+  color: firebrick;
 }
-

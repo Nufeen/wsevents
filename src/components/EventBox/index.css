@@ -1,8 +1,6 @@
 .details {
   position: absolute;
   text-align: left;
-  width: 90%;
-  max-width: 1200px;
   margin: 0 auto;
   left: 0;
   right: 0;
@@ -14,10 +12,14 @@
   pointer-events: none;
 }
 
-
 .details[data-year="2018"] {
+  width: 30%;
+  min-width: 250px;
+  padding-left: 0;
   padding-right: 50px;
-  padding-left: calc(50vw - 10%);
+  right: 0;
+  left: unset;
+  box-sizing: border-box;
 }
 
 .details h3 {

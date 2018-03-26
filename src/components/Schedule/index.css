@@ -56,7 +56,7 @@
 
 .month__caption {
   font-size: 12rem;
-  font-family: 'PT Mono', monospace;
+  font-family: "PT Mono", monospace;
 }
 
 .month__caption span {
@@ -72,9 +72,9 @@
   width: 10rem;
   height: 10rem;
   background: white;
-  margin: 10rem;
+  margin: 6rem;
   cursor: pointer;
-  padding: 3rem;
+  padding: 1rem;
 }
 
 .event:before {
@@ -107,16 +107,16 @@
   min-width: 60rem;
 }
 
-.event[data-past='true'] {
+.event[data-past="true"] {
   background: grey;
   opacity: 0.5;
 }
 
-.event[data-chosen='true'] {
+.event[data-chosen="true"] {
   background: red;
 }
 
-.event[data-city='true'] {
+.event[data-city="true"] {
   outline: 2px solid black;
   box-shadow: 0px 0px 0px 3px #4bc32d;
 }
