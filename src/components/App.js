@@ -20,7 +20,7 @@ class App extends React.Component {
     super(props);
     autobind(this);
     this.state = {
-      year: 2018,
+      year: 2019,
       current: 0,
       chosen: 0,
       city: null,
@@ -47,7 +47,7 @@ class App extends React.Component {
 
   nextYear() {
     const { year } = this.state;
-    const max = 2018;
+    const max = 2019;
     this.setState({ year: year < max ? year + 1 : max });
   }
 
