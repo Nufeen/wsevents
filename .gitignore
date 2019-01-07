@@ -13,3 +13,5 @@ yarn-error.log
 .babel_cache
 node_modules
 build
+
+Makefile
