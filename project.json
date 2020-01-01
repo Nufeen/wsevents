@@ -1,0 +1,8 @@
+{
+  "type": "site",
+  "name": "wsevents",
+  "title": "wsevents",
+  "url": {
+    "cdn": ""
+  }
+}

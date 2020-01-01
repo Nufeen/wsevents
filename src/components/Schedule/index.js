@@ -1,52 +1,52 @@
-import React from 'react';
-import autobind from 'react-autobind';
-import moment from 'moment';
+import React from 'react'
+import autobind from 'react-autobind'
+import moment from 'moment'
 
 class Schedule extends React.Component {
   constructor(props) {
-    super(props);
-    autobind(this);
-    this.state = { hovered: false };
+    super(props)
+    autobind(this)
+    this.state = { hovered: false }
   }
 
   componentDidMount() {
     document.addEventListener('keydown', e => {
       if (e.keyCode == 40 || e.keyCode == 9 || e.keyCode == 32) {
-        this.next();
+        this.next()
       } else if (e.keyCode == 38 || e.keyCode == 8) {
-        this.prev();
+        this.prev()
       }
-    });
+    })
   }
 
   next() {
-    const { chosen, data } = this.props;
-    const max = data.length - 1;
-    const next = chosen < max ? chosen + 1 : max;
-    const year = moment(data[next]['date']).format('Y');
-    this.props.choose(next, +year);
+    const { chosen, data } = this.props
+    const max = data.length - 1
+    const next = chosen < max ? chosen + 1 : max
+    const year = moment(data[next]['date']).format('Y')
+    this.props.choose(next, +year)
   }
 
   prev() {
-    const { chosen, data } = this.props;
-    const prev = chosen > 0 ? chosen - 1 : 0;
-    const year = moment(data[prev]['date']).format('Y');
-    this.props.choose(prev, +year);
+    const { chosen, data } = this.props
+    const prev = chosen > 0 ? chosen - 1 : 0
+    const year = moment(data[prev]['date']).format('Y')
+    this.props.choose(prev, +year)
   }
 
   handleClick(id) {
-    this.props.choose(id);
+    this.props.choose(id)
   }
 
-  renderTooltip(ev) {
-    this.setState({ hovered: ev });
+  renderTooltip(hovered) {
+    this.setState({ hovered })
   }
 
   render() {
-    const { current, chosen, city, data, year } = this.props;
+    const { current, chosen, city, data, year } = this.props
 
     if (data == null) {
-      return null;
+      return null
     }
 
     return (
@@ -88,30 +88,30 @@ class Schedule extends React.Component {
           onClick={this.next}
         />
       </section>
-    );
+    )
   }
 }
 
 function sort(month) {
   return month.slice().sort((a, b) => {
-    const a1 = moment(a.date).format('D');
-    const b1 = moment(b.date).format('D');
-    return a1 - b1;
-  });
+    const a1 = moment(a.date).format('D')
+    const b1 = moment(b.date).format('D')
+    return a1 - b1
+  })
 }
 
 function isPast(ev) {
-  const t = Date.now();
-  const tt = moment(t).format('YYYYMMDD');
-  return ev.date < tt;
+  const t = Date.now()
+  const tt = moment(t).format('YYYYMMDD')
+  return ev.date < tt
 }
 
 function date(ev) {
-  return moment(ev.date).format('DD/MM');
+  return moment(ev.date).format('DD/MM')
 }
 
 function tooltip(ev) {
-  return ev.name;
+  return ev.name
 }
 
 function monthCaption(n) {
@@ -128,20 +128,20 @@ function monthCaption(n) {
     'Oct',
     'Nov',
     'Dec',
-  ];
-  const num = n > 9 ? n : `0${n}`;
-  return `<span>${m[n - 1]}</span>${num}`;
+  ]
+  const num = n > 9 ? n : `0${n}`
+  return `<span>${m[n - 1]}</span>${num}`
 }
 
 function dataByMonths(d, year) {
-  const a12 = Array.from(Array(12).keys());
+  const a12 = Array.from(Array(12).keys())
   return a12.map((month, i) =>
     d.filter(x => {
-      const m = moment(x.date).format('M');
-      const y = moment(x.date).format('Y');
-      return m == i + 1 && y == year;
+      const m = moment(x.date).format('M')
+      const y = moment(x.date).format('Y')
+      return m == i + 1 && y == year
     })
-  );
+  )
 }
 
-export default Schedule;
+export default Schedule

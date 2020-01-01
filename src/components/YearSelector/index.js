@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const YearSelector = ({ year, prev, next }) => [
   <button key="e1" className="year__prev" onClick={prev} />,
@@ -6,6 +6,6 @@ const YearSelector = ({ year, prev, next }) => [
     {year}
   </div>,
   <button key="e3" className="year__next" onClick={next} />,
-];
+]
 
-export default YearSelector;
+export default YearSelector

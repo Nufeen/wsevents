@@ -1,18 +1,18 @@
-import React from 'react';
-import moment from 'moment';
+import React from 'react'
+import moment from 'moment'
 
 const Cities = ({ data, year, city, highlight }) => {
   const places = data
     .filter(x => moment(x.date).format('Y') == year)
     .map(x => x.place.split(',')[0])
-    .sort((a, b) => (a > b ? 1 : -1));
+    .sort((a, b) => (a > b ? 1 : -1))
 
-  const uniq = [...new Set(places)];
+  const uniq = [...new Set(places)]
 
   const count = uniq.reduce((acc, place) => {
-    acc[place] = places.filter(x => x == place).length;
-    return acc;
-  }, {});
+    acc[place] = places.filter(x => x == place).length
+    return acc
+  }, {})
 
   return (
     <section className="cities">
@@ -27,7 +27,7 @@ const Cities = ({ data, year, city, highlight }) => {
         </div>
       ))}
     </section>
-  );
-};
+  )
+}
 
-export default Cities;
+export default Cities

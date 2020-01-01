@@ -1,31 +1,23 @@
 {
   "parser": "babel-eslint",
-  "extends": [
-    "eslint:recommended",
-    "plugin:react/recommended"
-  ],
-  "plugins": [
-    "react",
-    "prettier"
-  ],
+  "extends": ["eslint:recommended", "plugin:react/recommended"],
+  "plugins": ["react", "react-hooks", "prettier"],
   "env": {
     "browser": true,
     "node": true,
-    "es6": true
+    "es6": true,
+    "jest": true
   },
   "rules": {
     "react/prop-types": 0,
-    "react/jsx-no-target-blank": 0,
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true
-      }
-    ]
+    "prettier/prettier": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
   },
   "globals": {
-    "__PUBLIC_PATH__": true,
-    "google": true
+    "google": true,
+    "DEBUG": true,
+    "PUBLIC_URL": true,
+    "CDN_URL": true
   }
 }
