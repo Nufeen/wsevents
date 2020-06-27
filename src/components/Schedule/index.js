@@ -73,7 +73,7 @@ class Schedule extends React.Component {
                 className="event"
                 data-chosen={ev.id == chosen}
                 data-past={isPast(ev, current)}
-                data-city={ev.place.includes(city)}
+                data-city={ev.place?.includes(city)}
                 data-tooltip={tooltip(ev)}
                 data-date={date(ev)}
                 onClick={() => this.handleClick(ev.id)}

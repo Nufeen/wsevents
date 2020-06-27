@@ -4,6 +4,7 @@ import moment from 'moment'
 const Cities = ({ data, year, city, highlight }) => {
   const places = data
     .filter(x => moment(x.date).format('Y') == year)
+    .filter(x => x.place != null)
     .map(x => x.place.split(',')[0])
     .sort((a, b) => (a > b ? 1 : -1))
 
